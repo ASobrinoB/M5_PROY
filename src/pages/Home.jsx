@@ -1,8 +1,8 @@
 import React from 'react'
-import { UserFinder } from '../components/UserFinder'
+import DataTable from '../components/DataTable'
 
 export const Home = () => {
   return (
-    <UserFinder />
+    <DataTable />
   )
 }

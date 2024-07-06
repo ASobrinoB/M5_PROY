@@ -1,27 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, CircularProgress, TablePagination } from '@mui/material';
+import React, { useState } from 'react';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, CircularProgress, TablePagination, Alert } from '@mui/material';
+import useFetch from './useFetch';
 
 const DataTable = () => {
-  const [users, setUsers] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
 
-  useEffect(() => {
-    const fetchUsers = async () => {
-      try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/users');
-        const data = await response.json();
-        setUsers(data);
-        setLoading(false);
-      } catch (error) {
-        console.error('Error fetching data: ', error);
-        setLoading(false);
-      }
-    };
-
-    fetchUsers();
-  }, []);
+  const { data, loading, error } = useFetch('https://jsonplaceholder.typicode.com/users')
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -34,6 +19,10 @@ const DataTable = () => {
 
   if (loading) {
     return <CircularProgress />;
+  }
+
+  if (error) {
+    return <Alert severity="error">{error.message}</Alert>
   }
 
   return (
@@ -50,7 +39,7 @@ const DataTable = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {users.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((user) => (
+            {data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((user) => (
               <TableRow key={user.id}>
                 <TableCell>{user.name}</TableCell>
                 <TableCell>{user.username}</TableCell>
@@ -65,7 +54,7 @@ const DataTable = () => {
       <TablePagination
         rowsPerPageOptions={[5, 10, 25]}
         component="div"
-        count={users.length}
+        count={data.length}
         rowsPerPage={rowsPerPage}
         page={page}
         onPageChange={handleChangePage}

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useNavigate } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -10,17 +11,16 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import { useNavigate } from 'react-router-dom';
 
+// se cambia
 const pages = [
-  { name: 'inicio', path: '/' },
-  { name: 'about', path: '/about'}
+  { name: 'Home', path: '/' },
+  { name: 'About', path: '/about' }
 ];
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // se agrega
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -30,14 +30,16 @@ function NavBar() {
     setAnchorElNav(null);
   };
 
+  // se cambia
   const handleNavigate = (path) => {
-    navigate(path) // puede ser '/' o '/about'
-    handleCloseNavMenu()
-  }
+    navigate(path);
+    handleCloseNavMenu();
+  };
 
+  // se agrega
   const handleLogoClick = () => {
-    navigate(pages[0].path)
-  }
+    navigate('/');
+  };
 
   return (
     <AppBar position="static">
@@ -45,10 +47,10 @@ function NavBar() {
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
-            onClick={handleLogoClick}
             variant="h6"
             noWrap
-            component="a"
+            component="div"
+            onClick={handleLogoClick} // se agrega
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -57,7 +59,7 @@ function NavBar() {
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
-              cursor: 'pointer'
+              cursor: 'pointer',  // se agrega
             }}
           >
             LOGO
@@ -93,7 +95,7 @@ function NavBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page.name} onClick={() => handleNavigate(page.path)}>
+                <MenuItem key={page.name} onClick={() => handleNavigate(page.path)}> // se agrega
                   <Typography textAlign="center">{page.name}</Typography>
                 </MenuItem>
               ))}
@@ -101,10 +103,10 @@ function NavBar() {
           </Box>
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
-            onClick={handleLogoClick}
             variant="h5"
             noWrap
-            component="a"
+            component="div"
+            onClick={handleLogoClick} // se agrega
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -114,7 +116,7 @@ function NavBar() {
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
-              cursor: 'pointer'
+              cursor: 'pointer', // se agrega
             }}
           >
             LOGO
@@ -123,7 +125,7 @@ function NavBar() {
             {pages.map((page) => (
               <Button
                 key={page.name}
-                onClick={() => handleNavigate(page.path)}
+                onClick={() => handleNavigate(page.path)} // se agrega
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page.name}
@@ -135,4 +137,5 @@ function NavBar() {
     </AppBar>
   );
 }
+
 export default NavBar;
