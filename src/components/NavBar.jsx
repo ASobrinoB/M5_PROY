@@ -12,15 +12,16 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
-// se cambia
 const pages = [
   { name: 'Home', path: '/' },
-  { name: 'About', path: '/about' }
+  { name: 'About', path: '/About' },
+  { name: 'Clase', path: '/Clase' },
+  { name: 'Proyecto', path: '/Proyecto' }
 ];
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const navigate = useNavigate(); // se agrega
+  const navigate = useNavigate();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -30,13 +31,11 @@ function NavBar() {
     setAnchorElNav(null);
   };
 
-  // se cambia
   const handleNavigate = (path) => {
     navigate(path);
     handleCloseNavMenu();
   };
 
-  // se agrega
   const handleLogoClick = () => {
     navigate('/');
   };
@@ -50,7 +49,7 @@ function NavBar() {
             variant="h6"
             noWrap
             component="div"
-            onClick={handleLogoClick} // se agrega
+            onClick={handleLogoClick}
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -59,10 +58,9 @@ function NavBar() {
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
-              cursor: 'pointer',  // se agrega
+              cursor: 'pointer',
             }}
           >
-            LOGO
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -95,8 +93,8 @@ function NavBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page.name} onClick={() => handleNavigate(page.path)}> // se agrega
-                  <Typography textAlign="center">{page.name}</Typography>
+                <MenuItem key={page.name} onClick={() => handleNavigate(page.path)}>
+                  <Typography textAlign="center">{page.name} yy</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -106,7 +104,7 @@ function NavBar() {
             variant="h5"
             noWrap
             component="div"
-            onClick={handleLogoClick} // se agrega
+            onClick={handleLogoClick}
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -116,18 +114,17 @@ function NavBar() {
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
-              cursor: 'pointer', // se agrega
+              cursor: 'pointer',
             }}
           >
-            LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page.name}
-                onClick={() => handleNavigate(page.path)} // se agrega
+                onClick={() => handleNavigate(page.path)}
                 sx={{ my: 2, color: 'white', display: 'block' }}
-              >
+                >
                 {page.name}
               </Button>
             ))}

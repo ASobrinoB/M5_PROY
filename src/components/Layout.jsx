@@ -10,4 +10,3 @@ export const Layout = () => {
     </div>
   )
 }
-// 
