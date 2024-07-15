@@ -2,8 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import { Layout } from "./components/Layout";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
-import { EnClase } from "./pages/EnClase";
-import { Currencies } from "./pages/Currencies";
+import { UltimaClase } from "./pages/UltimaClase";
+import { Countries } from "./pages/Countries";
 
 
 export const Router = createBrowserRouter([
@@ -20,12 +20,12 @@ export const Router = createBrowserRouter([
                 element: <About />
             }, 
             {
-                path: '/enclase',
-                element: <EnClase />
+                path: '/ultimaclase',
+                element: <UltimaClase />
             }, 
             {
-                path: '/currencies',
-                element: <Currencies />
+                path: '/countries',
+                element: <Countries />
             }
         ]
     }

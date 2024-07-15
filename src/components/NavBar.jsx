@@ -10,13 +10,12 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 
 const pages = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
-  { name: 'EnClase', path: '/enclase' },
-  { name: 'Currencies', path: '/currencies' }
+  { name: 'UltimaClase', path: '/ultimaclase' },
+  { name: 'Countries', path: '/countries' }
 ];
 
 function NavBar() {
@@ -44,7 +43,6 @@ function NavBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
           <Typography
             variant="h6"
             noWrap
@@ -94,12 +92,11 @@ function NavBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page.name} onClick={() => handleNavigate(page.path)}>
-                  <Typography textAlign="center">{page.name} yy</Typography>
+                  <Typography textAlign="center">{page.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
           <Typography
             variant="h5"
             noWrap

@@ -13,6 +13,7 @@ const useFetch = (url) => {
                     throw new Error("Error al obtener la informacion" + url)
                 }
                 const result = await response.json();
+                console.log (result)
                 setData(result)
             } catch (error) {
                 setError(error)
