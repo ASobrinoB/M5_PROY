@@ -1,7 +1,7 @@
 import React from 'react'
 import DataTable from '../components/DataTable'
 
-export const Clase = () => {
+export const EnClase = () => {
   return (
     <DataTable />
   )

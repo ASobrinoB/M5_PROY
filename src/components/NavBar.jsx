@@ -14,9 +14,9 @@ import AdbIcon from '@mui/icons-material/Adb';
 
 const pages = [
   { name: 'Home', path: '/' },
-  { name: 'About', path: '/About' },
-  { name: 'Clase', path: '/Clase' },
-  { name: 'Proyecto', path: '/Proyecto' }
+  { name: 'About', path: '/about' },
+  { name: 'EnClase', path: '/enclase' },
+  { name: 'Currencies', path: '/currencies' }
 ];
 
 function NavBar() {
@@ -44,7 +44,7 @@ function NavBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
           <Typography
             variant="h6"
             noWrap
@@ -99,7 +99,7 @@ function NavBar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
           <Typography
             variant="h5"
             noWrap

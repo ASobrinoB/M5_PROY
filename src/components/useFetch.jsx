@@ -10,7 +10,7 @@ const useFetch = (url) => {
             try {
                 const response = await fetch(url)
                 if (!response.ok) {
-                    throw new Error("Error al obtener la informacion")
+                    throw new Error("Error al obtener la informacion" + url)
                 }
                 const result = await response.json();
                 setData(result)
