@@ -59,12 +59,12 @@ A continuación, usarás esta lista para saber los requisitos mínimos del proye
 
 ### PANTALLAS
 
-!(./images/home.png)
-!(./images/about.png)
+![Image](./images/home.png)
+![Image](./images/about.png)
 
 ### EL EJERCICIO QUE HICIMOS EN CLASES
 
-!(./images/ultimaclase.png)
+![Image](./images/ultimaclase.png)
 
 ### Proyecto realizado con API 
 
@@ -269,5 +269,8 @@ Objeto que responde la API
    }
 }
 
-!(./images/countries.png)
-!(./images/busqueda.png)
+![Image](./images/countries.png)
+
+### Realizando una busqueda
+
+![Image](./images/busqueda.png)
