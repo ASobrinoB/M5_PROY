@@ -4,39 +4,13 @@
 
 ## **ÍNDICE**
 
-* [1. Intro](#1-intro)
-* [2. Demo](#2-demo)
-* [3. ¿Qué construirás?](#3-qu%C3%A9-construir%C3%A1s)
-* [4. Objetivos de Aprendizaje](#4-objetivos-de-aprendizaje)
-* [5. Requisitos](#5-requisitos-y-entregables)
-* [6. Criterios de evaluación](#6-criterios-de-evaluaci%C3%B3n)
-* [7. Entregas](#7-entregas)
+* [1. Enunciado](#1-Enunciado)
+* [2. Requisitos](#2-requisitos-y-entregables)
+* [3. Entrega](#3-entrega)
 
 ****
 
-## 1. Intro
-
-En la era de la información, cada vez más servicios están disponibles en línea y, como desarrolladores, necesitamos saber cómo interactuar con ellos. La mayoría de estos servicios exponen una API (Application Programming Interface) para que podamos interactuar con ellos. En este proyecto, tendrás la oportunidad de trabajar con APIs públicas y mostrar la información en una interfaz de usuario.
-
-Para este proyecto, usarás React, una biblioteca JavaScript para construir interfaces de usuario. React permite a los desarrolladores construir aplicaciones web de una sola página que pueden cambiar sin recargar la página completa. Esto hace que la interacción del usuario sea más rápida y suave.
-
-
-****
-
-## 2. Demo
-
-Puedes acceder a la sección del demo directamente aqui: [LINK](https://github.com/UDDBootcamp/7M_FULLSTACK_M5_PROY/tree/master/demo)
-
-En esta demo, usamos una API llamada `https://exchangerate.host/`, la cual gratuitamente proporciona información histórica sobre las divisas en el tiempo.
-
-La idea es que revises la aplicación y sea una actividad de inspiración sobre qué aplicación quisieras crear tú desde el lado del Frontend, usando APIs.
-
-![](./images/react-data-tables.gif)
-
-
-****
-
-## 3. ¿Qué construirás?
+## 1. Enunciado
 
 Para este proyecto, construirás una aplicación web con React que consumirá datos de una API pública. Los datos que obtenga de la API se mostrarán en una interfaz de usuario.
 
@@ -55,21 +29,7 @@ Tu aplicación deberá:
 
 ****
 
-## 4. Objetivos de aprendizaje
-
-- Crear componentes en React y entender cómo se relacionan entre sí
-- Pasar datos entre componentes usando `props`
-- Manejar eventos en React
-- Manejar el estado de los componentes con el `hook useState`
-- Uso de `useEffect` para manejar efectos secundarios
-- Implementar rutas con `React Router`
-- Manejo de errores con `Error Boundaries`
-- Conectar tu aplicación React a una API para obtener datos
-- De manera opcional y si lo require, Uso de `useRef`,` useCallback`, y `useMemo` 
-
-****
-
-## 5. Requisitos y entregables
+## 2. Requisitos y entregables
 
 A continuación, usarás esta lista para saber los requisitos mínimos del proyecto:
 
@@ -95,24 +55,219 @@ A continuación, usarás esta lista para saber los requisitos mínimos del proye
 
 ****
 
-## 6. Criterios de evaluación
+## 3. Entrega
 
-A partir de los requisitos, tu % estará definido de esta forma:
+### PANTALLAS
 
-| ÁREA       | % DEL TOTAL |
-| ------------- |:-------------:|
-| REACT | 70%     |
-| CONTROL DE VERSIONES      | 15%     |
-| DESPLIEGUE | 10%      |
-| ENTREGA A TIEMPO | 5%      |
+!(./images/home.png)
+!(./images/about.png)
 
-****
+### EL EJERCICIO QUE HICIMOS EN CLASES
 
-## 7. Entregas
+!(./images/ultimaclase.png)
 
-- **Definición de fechas.** Habla con tus coaches sobre el periodo de entregas del proyecto.
+### Proyecto realizado con API 
 
-- **Cumple con los requisitos y entregables.** En caso de que no logres cumplir con todos los requisitos, el % que obtendrás responderá a los criterios de evoluación. Es importante que entregues tu proyecto a tiempo. 
+https://restcountries.com/v3.1/all
 
-- **Presentación del proyecto.** Como parte de la entrega, deberás presentar tu proyecto al resto de la clase. Esta es una gran oportunidad para recibir comentarios de tus compañeros y profesores.
+Objeto que responde la API
 
+{
+   "name":{
+      "common":"Wallis and Futuna",
+      "official":"Territory of the Wallis and Futuna Islands",
+      "nativeName":{
+         "fra":{
+            "official":"Territoire des îles Wallis et Futuna",
+            "common":"Wallis et Futuna"
+         }
+      }
+   },
+   "tld":[
+      ".wf"
+   ],
+   "cca2":"WF",
+   "ccn3":"876",
+   "cca3":"WLF",
+   "independent":false,
+   "status":"officially-assigned",
+   "unMember":false,
+   "currencies":{
+      "XPF":{
+         "name":"CFP franc",
+         "symbol":"₣"
+      }
+   },
+   "idd":{
+      "root":"+6",
+      "suffixes":[
+         "81"
+      ]
+   },
+   "capital":[
+      "Mata-Utu"
+   ],
+   "altSpellings":[
+      "WF",
+      "Territory of the Wallis and Futuna Islands",
+      "Territoire des îles Wallis et Futuna"
+   ],
+   "region":"Oceania",
+   "subregion":"Polynesia",
+   "languages":{
+      "fra":"French"
+   },
+   "translations":{
+      "ara":{
+         "official":"إقليم جزر واليس وفوتونا",
+         "common":"واليس وفوتونا"
+      },
+      "bre":{
+         "official":"Tiriad Inizi Wallis ha Futuna",
+         "common":"Wallis ha Futuna"
+      },
+      "ces":{
+         "official":"Teritorium ostrovů Wallis a Futuna",
+         "common":"Wallis a Futuna"
+      },
+      "cym":{
+         "official":"Territory of the Wallis and Futuna Islands",
+         "common":"Wallis and Futuna"
+      },
+      "deu":{
+         "official":"Gebiet der Wallis und Futuna",
+         "common":"Wallis und Futuna"
+      },
+      "est":{
+         "official":"Wallise ja Futuna ala",
+         "common":"Wallis ja Futuna"
+      },
+      "fin":{
+         "official":"Wallisin ja Futunan yhteisö",
+         "common":"Wallis ja Futuna"
+      },
+      "fra":{
+         "official":"Territoire des îles Wallis et Futuna",
+         "common":"Wallis-et-Futuna"
+      },
+      "hrv":{
+         "official":"Teritoriju Wallis i Futuna",
+         "common":"Wallis i Fortuna"
+      },
+      "hun":{
+         "official":"Wallis és Futuna",
+         "common":"Wallis és Futuna"
+      },
+      "ita":{
+         "official":"Territorio delle Isole Wallis e Futuna",
+         "common":"Wallis e Futuna"
+      },
+      "jpn":{
+         "official":"ウォリス·フツナ諸島の領土",
+         "common":"ウォリス・フツナ"
+      },
+      "kor":{
+         "official":"왈리스 퓌튀나",
+         "common":"왈리스 퓌튀나"
+      },
+      "nld":{
+         "official":"Grondgebied van de Wallis en Futuna",
+         "common":"Wallis en Futuna"
+      },
+      "per":{
+         "official":"جزایر والیس و فوتونا",
+         "common":"والیس و فوتونا"
+      },
+      "pol":{
+         "official":"Terytorium Wysp Wallis i Futuna",
+         "common":"Wallis i Futuna"
+      },
+      "por":{
+         "official":"Território das Ilhas Wallis e Futuna",
+         "common":"Wallis e Futuna"
+      },
+      "rus":{
+         "official":"Территория Уоллис и Футуна острова",
+         "common":"Уоллис и Футуна"
+      },
+      "slk":{
+         "official":"Teritórium ostrovov Wallis a Futuna",
+         "common":"Wallis a Futuna"
+      },
+      "spa":{
+         "official":"Territorio de las Islas Wallis y Futuna",
+         "common":"Wallis y Futuna"
+      },
+      "srp":{
+         "official":"Територија државе Валис и Футуна",
+         "common":"Валис и Футуна"
+      },
+      "swe":{
+         "official":"Territoriet Wallis- och Futunaöarna",
+         "common":"Wallis- och Futunaöarna"
+      },
+      "tur":{
+         "official":"Wallis ve Futuna Adaları Bölgesi",
+         "common":"Wallis ve Futuna Adaları Bölgesi"
+      },
+      "urd":{
+         "official":"سر زمینِ والس و فتونہ جزائر",
+         "common":"والس و فتونہ"
+      },
+      "zho":{
+         "official":"瓦利斯和富图纳群岛",
+         "common":"瓦利斯和富图纳群岛"
+      }
+   },
+   "latlng":[
+      -13.3,
+      -176.2
+   ],
+   "landlocked":false,
+   "area":142.0,
+   "demonyms":{
+      "eng":{
+         "f":"Wallis and Futuna Islander",
+         "m":"Wallis and Futuna Islander"
+      }
+   },
+   "flag":"\uD83C\uDDFC\uD83C\uDDEB",
+   "maps":{
+      "googleMaps":"https://goo.gl/maps/CzVqK74QYtbHv65r5",
+      "openStreetMaps":"https://www.openstreetmap.org/relation/3412448"
+   },
+   "population":11750,
+   "car":{
+      "signs":[
+         "F"
+      ],
+      "side":"right"
+   },
+   "timezones":[
+      "UTC+12:00"
+   ],
+   "continents":[
+      "Oceania"
+   ],
+   "flags":{
+      "png":"https://flagcdn.com/w320/wf.png",
+      "svg":"https://flagcdn.com/wf.svg"
+   },
+   "coatOfArms":{
+      
+   },
+   "startOfWeek":"monday",
+   "capitalInfo":{
+      "latlng":[
+         -13.95,
+         -171.93
+      ]
+   },
+   "postalCode":{
+      "format":"#####",
+      "regex":"^(986\\d{2})$"
+   }
+}
+
+!(./images/countries.png)
+!(./images/busqueda.png)

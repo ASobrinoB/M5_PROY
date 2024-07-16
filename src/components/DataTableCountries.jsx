@@ -33,10 +33,8 @@ const DataTableCountries = () => {
     return <Alert severity="error">{error.message}</Alert>;
   }
 
-  // Filtrar los países según el término de búsqueda
   const filteredCountries = data.filter((country) =>
-    country.name.common.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+    country.name.common.toLowerCase().includes(searchTerm.toLowerCase()));
 
   return (
     <Paper>

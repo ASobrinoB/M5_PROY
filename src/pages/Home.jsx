@@ -2,6 +2,8 @@ import React from 'react'
 
 export const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <img src='./images/banner.png' style={{ width: '1000px', height: 'auto' }}/>
+    </div>
   )
 }
